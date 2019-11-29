@@ -1,5 +1,6 @@
 package modelo;
 
+import java.util.Collections;
 import java.util.LinkedList;
 
 import processing.core.PApplet;
@@ -8,6 +9,7 @@ public class Logica {
 	private PApplet app;
 	private Personaje p;
 	private LinkedList<Personaje> personajes;
+	private OrdenarPorEdad edadComp;
 	private int[ ] personajesAgregados;
 	public Logica(PApplet app) {
 		// TODO Auto-generated constructor stub
@@ -15,6 +17,7 @@ public class Logica {
 		personajes = new LinkedList<Personaje>();
 		this.app = app;
 		personajesAgregados = new  int[4];
+		edadComp=new OrdenarPorEdad();
 	}
 
 	public void pintar() {
@@ -66,8 +69,16 @@ public class Logica {
 		
 		
 	}
-	public void ordenarEdad() {
+	
+	
+	public void arregloP(){
+		//for (int i = 0; i < personajesAgregados.length; i++) {
+			
+	//	}
 		
+	}
+	public void ordenarEdad() {
+		Collections.sort(personajes,edadComp);
 		
 	}
 

@@ -6,9 +6,9 @@ public class OrdenarPorEdad implements Comparator<Personaje> {
 
 
 	@Override
-	public int compare(Personaje arg0, Personaje arg1) {
+	public int compare(Personaje p1, Personaje p2) {
 		// TODO Auto-generated method stub
-		return 0;
+		return p1.getEdad()-p1.getEdad();
 	}
 
 }
