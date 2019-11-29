@@ -8,12 +8,13 @@ public class Logica {
 	private PApplet app;
 	private Personaje p;
 	private LinkedList<Personaje> personajes;
-
+	private int[ ] personajesAgregados;
 	public Logica(PApplet app) {
 		// TODO Auto-generated constructor stub
 
 		personajes = new LinkedList<Personaje>();
 		this.app = app;
+		personajesAgregados = new  int[4];
 	}
 
 	public void pintar() {

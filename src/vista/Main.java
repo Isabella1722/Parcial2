@@ -7,6 +7,7 @@ public class Main extends PApplet{
 
 	Logica logica;
 
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PApplet.main(Main.class.getName());
@@ -35,6 +36,17 @@ public class Main extends PApplet{
 			cursor(HAND);
 			logica.agregarP();
 		}
+		
+		if (mouseX >= 40 && mouseX <= 118 && mouseY >= 749 && mouseY <= 789) {
+			cursor(HAND);
+		//natural
+		}
+		
+		if (mouseX >= 151 && mouseX <= 228 && mouseY >= 751 && mouseY <= 789) {
+			cursor(HAND);
+		//parcial
+		}
+
 
 	}
 }
