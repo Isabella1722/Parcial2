@@ -50,6 +50,15 @@ public class Logica {
 
 	}
 	
+	public void moverP() {
+		for (int i = 0; i < personajes.size(); i++) {
+			personajes.get(i).mover();
+		
+
+		}
+
+	}
+	
 	public void agregarP() {
 		Personaje p =new Personaje (app);
 		personajes.add(p);

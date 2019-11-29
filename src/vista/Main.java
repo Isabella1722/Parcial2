@@ -24,6 +24,7 @@ public class Main extends PApplet{
 		background(255);
 		logica.pintar();
 		logica.pintarP();
+		logica.moverP();
 		
 	}
 	

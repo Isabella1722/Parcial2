@@ -24,7 +24,7 @@ public class Personaje implements Runnable{
 		this.personaje=personaje;
 		this.app=app;
 		 new Thread(this).start();
-		 this.velX=4;
+		 this.velX=1;
 		
 	}
 	
@@ -50,9 +50,9 @@ public class Personaje implements Runnable{
 	}
 
 public void mover(){
-		posX+=velX;
+		posX+=1*velX;
 		
-		if (posX<15 || posX> 1000-10) {
+		if (posX<388 || posX> 1000-10) {
 			velX*=-1;
 		}
 		
