@@ -23,11 +23,17 @@ public class Main extends PApplet{
 	public void draw () {
 		background(255);
 		logica.pintar();
+		logica.pintarP();
 		
 	}
 	
 	public void mousePressed() {
 		System.out.print(mouseX + " " + mouseY + "\n");
-		logica.pintarP();
+		
+		if (mouseX >= 700 && mouseX <= 851 && mouseY >= 701 && mouseY <= 778) {
+			cursor(HAND);
+			logica.agregarP();
+		}
+
 	}
 }

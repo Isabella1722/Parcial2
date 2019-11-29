@@ -3,7 +3,7 @@ package modelo;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class Personaje {
+public class Personaje implements Runnable{
 
 	private int posX;
 	private int posY;
@@ -12,22 +12,46 @@ public class Personaje {
 	private int edad;
 	private int numero;
 	private PApplet app;
-	public Personaje(int posX, int posY, int edad, int numero, PApplet app) {
+	private boolean isAlive = false;
+	public Personaje( PApplet app) {
 		this.personaje =  app.loadImage("../data/lisa_simpson.png");
 		this.personaje2= app.loadImage("../data/bart_simpson.png");
 		this.edad=(int) app.random(1, 10);
-		this.posX=(int) app.random(50, 920);
-		this.posY=(int) app.random(120, 500);
+		this.posX=(int) app.random(316, 900);
+		this.posY=(int) app.random(100, 500);
 		this.numero=numero;
 		this.personaje=personaje;
 		this.app=app;
+		 new Thread(this).start();
+		
 	}
 	
 	public void pintarPersonaje() {
 		app.imageMode(app.CENTER);
-		 app.image(this.personaje, posX, posY);
+		app.image(this.personaje,this.posX, this.posY,80,90);
+	
 		 
 	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while(isAlive) {
+			mover();
+		try {
+			Thread.sleep(20);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		}
+	}
+
+public void mover(){
+		posX+=posX+10;
+		
+	}
+	
 
 	public int getPosX() {
 		return posX;

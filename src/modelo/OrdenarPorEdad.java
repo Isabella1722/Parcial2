@@ -1,9 +1,14 @@
 package modelo;
 
-public class OrdenarPorEdad {
+import java.util.Comparator;
 
-	public OrdenarPorEdad() {
-		// TODO Auto-generated constructor stub
+public class OrdenarPorEdad implements Comparator<Personaje> {
+
+
+	@Override
+	public int compare(Personaje arg0, Personaje arg1) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
