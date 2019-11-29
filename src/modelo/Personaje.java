@@ -7,6 +7,7 @@ public class Personaje implements Runnable{
 
 	private int posX;
 	private int posY;
+	private int velX;
 	private PImage personaje;
 	private PImage personaje2;
 	private int edad;
@@ -23,6 +24,7 @@ public class Personaje implements Runnable{
 		this.personaje=personaje;
 		this.app=app;
 		 new Thread(this).start();
+		 this.velX=4;
 		
 	}
 	
@@ -48,7 +50,12 @@ public class Personaje implements Runnable{
 	}
 
 public void mover(){
-		posX+=posX+10;
+		posX+=velX;
+		
+		if (posX<15 || posX> 1000-10) {
+			velX*=-1;
+		}
+		
 		
 	}
 	
